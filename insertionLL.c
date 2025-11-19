@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<stdlib.h>
+//Insertion at start of single LL
+struct node
+{
+  int data;
+  struct node*next;  /* data */
+};
+ void traverselinkedlist(struct node*ptr)
+{
+    while(ptr!=NULL)
+    {
+        printf("The values are: %d",ptr->data);
+        ptr=ptr->next;
+        printf("\n");
+    }
+}
+struct node* insertionatfirst(struct node*head,int data)
+{
+   struct node*ptr=(struct node*)malloc(sizeof(struct node ));
+   ptr->data=data;
+   ptr->next=head;
+   head=ptr;
+   return ptr;
+}
+int main()
+{
+   struct node*head=(struct node*)malloc(sizeof(struct node));
+    struct node*second=(struct node*)malloc(sizeof(struct node));
+    struct node*third=(struct node*)malloc(sizeof(struct node));
+    head->data=7;
+    head->next=second;
+    second->data=73;
+   second->next=third;
+
+    third->data=70;
+    third->next=NULL;
+    traverselinkedlist(head);
+    head=insertionatfirst(head,56);
+       traverselinkedlist(head);
+     
+    
+}
+
+
+
+
