@@ -14,29 +14,6 @@ int isfull(struct queue* q)
     }
     return 0;
 }
-int isempty(struct queue* q)
-{
-    if(q->r==q->f)
-{
-    return 1;
-}
-return 0;
-
-}
-void dequeue(struct queue* q)
-{
-    int a=-1;
-    if(isempty(q))
-    {
-        printf("This queue is empty");
-    }
-    else
-    {
-       q->f++;
-       a=q->r[q->f];
-       return a;
-    }
-}
 void enqueue(struct queue* q,int val)
 {
     if(isfull(q))
@@ -59,14 +36,6 @@ int main()
     enqueue(&q,56);
     enqueue(&q,30);
     enqueue(&q,15);
-    printf("Dequeuing element %d ",dequeue(&q));
-    printf("Dequeuing element %d ",dequeue(&q));
-    printf("Dequeuing element %d ",dequeue(&q));
-    if(isempty(&q)
-{
-    printf("queue is empty");
-})
-
 
 
 }
