@@ -23,7 +23,7 @@ int isfull(struct node* ptr)
     return 0;
 }
 
-struct node* push(struct node* top,iny val)
+struct node* push(struct node* top,int val)
 {
     if(isfull(top))
     {
@@ -45,11 +45,12 @@ struct node* pop(struct node* top,intval)
     if(isempty(*top))
     {
         printf(Stack underflow);
+        return -1;
     }
     else
     {
        struct node* n=*top;
-       *top=*top->next;
+       *top=(*op)>next;
        int x=n->data;
        free(n);
        return x;
