@@ -51,7 +51,7 @@ struct node* pop(struct node* top,intval)
     {
        struct node* n=*top;
        *top=(*top)->next;
-       int x=n->data;
+       int x =n->data;
        free(n);
        return x;
 
