@@ -43,6 +43,6 @@ int main()
     enqueue(34);
     enqueue(45);
     enqueue(78);
-    linkedlisttraversal(f);
+   // linkedlisttraversal(f);
 
 }
