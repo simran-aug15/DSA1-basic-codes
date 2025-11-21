@@ -40,11 +40,11 @@ struct node* push(struct node* top,iny val)
 
     }
 }
-struct node* pop(struct node* top,iny val)
+struct node* pop(struct node* top,intval)
 {
     if(isempty(*top))
     {
-        printf(:Stack underflow);
+        printf(Stack underflow);
     }
     else
     {
