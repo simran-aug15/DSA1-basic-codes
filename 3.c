@@ -40,11 +40,11 @@ struct node* push(struct node* top,int val)
 
     }
 }
-struct node* pop(struct node* top,intval)
+int pop(struct node** top)
 {
     if(isempty(*top))
     {
-        printf(Stack underflow);
+        printf("Stack underflow");
         return -1;
     }
     else
