@@ -39,10 +39,10 @@ int linkedlisttraversal(struct node* ptr)
 }
 int main()
 {
-    linkedlisttraversal(f);
+    //linkedlisttraversal(f);
     enqueue(34);
     enqueue(45);
     enqueue(78);
-   // linkedlisttraversal(f);
+    linkedlisttraversal(f);
 
 }
