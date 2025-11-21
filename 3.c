@@ -46,8 +46,14 @@ struct node* pop(struct node* top,iny val)
     {
         printf(:Stack underflow);
     }
-    else{
-        
+    else
+    {
+       struct node* n=*top;
+       *top=*top->next;
+       int x=n->data;
+       free(n);
+       return x;
+
     }
 }
 void linkedlisttraversal(struct node* ptr)
@@ -66,5 +72,8 @@ int main()
     top=push(top,8);
     top=push(top,89);
     printf("stack elements are \n ");
+    linkedlisttraversal(top);
+    int element=pop(&top);
+    printf("Pop element is %d \n",element);
     linkedlisttraversal(top);
 }
