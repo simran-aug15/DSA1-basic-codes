@@ -63,5 +63,5 @@ int main()
     printf("Dequeuing element %d \n ",dequeue());
     printf("Dequeuing element %d \n ",dequeue());
 
-    linkedlisttraversal(f);
+    
 }
