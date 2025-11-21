@@ -23,7 +23,7 @@ int isempty(struct queue* q)
 return 0;
 
 }
-void dequeue(struct queue* q)
+int dequeue(struct queue* q)
 {
     int a=-1;
     if(isempty(q))
@@ -33,7 +33,7 @@ void dequeue(struct queue* q)
     else
     {
        q->f++;
-       a=q->r[q->f];
+       a=q->arr[q->f];
        return a;
     }
 }
