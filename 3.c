@@ -61,5 +61,7 @@ int main()
     enqueue(78);
     linkedlisttraversal(f);
     printf("Dequeuing element %d \n ",dequeue());
+    printf("Dequeuing element %d \n ",dequeue());
+
     linkedlisttraversal(f);
 }
