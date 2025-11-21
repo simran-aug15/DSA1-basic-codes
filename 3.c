@@ -50,7 +50,7 @@ struct node* pop(struct node* top,intval)
     else
     {
        struct node* n=*top;
-       *top=(*op)>next;
+       *top=(*top)->next;
        int x=n->data;
        free(n);
        return x;
