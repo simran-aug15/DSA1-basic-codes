@@ -29,22 +29,6 @@ void enqueue(int val)
       }
     }
 }
-int dequeue()
-{
-    struct node* ptr=f;
-    int val=-1;
-    if(f==NULL)
-    {
-        printf("Queue is empty");
-    }
-    else
-    {
-      f=f->next;
-      val=ptr->data;
-      free(ptr);
-      return val;
-    }
-}
 int linkedlisttraversal(struct node* ptr)
 {
     while(ptr!=NULL)
@@ -55,11 +39,10 @@ int linkedlisttraversal(struct node* ptr)
 }
 int main()
 {
-    
+    //linkedlisttraversal(f);
     enqueue(34);
     enqueue(45);
     enqueue(78);
     linkedlisttraversal(f);
-    printf("Dequeuing element %d ",dequeue());
-    linkedlisttraversal(f);
+
 }
