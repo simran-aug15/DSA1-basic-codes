@@ -46,8 +46,16 @@ int insert(struct node* root,int key)
     }
    return 1;
 }
+void inorder(struct node* root) {
+    if (root != NULL) {
+        inorder(root->left);
+        printf("%d \n", root->data);
+        inorder(root->right);
+    }
+}
 int main()
-{
+{    
+
     struct node* p=Createnode(5);
     struct node* p1=Createnode(54);
     struct node* p2=Createnode(67);
@@ -58,7 +66,8 @@ int main()
     p1->left=p3;
     p1->right=p4;
     insert(p,7);
-    printf("%d ",p->right->right);
+    printf("the inorder values are\n ");
+    inorder(p);
     return 0;
 
 
