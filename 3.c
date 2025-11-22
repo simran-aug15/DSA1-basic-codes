@@ -44,7 +44,7 @@ int insert(struct node* root,int key)
     {
         prev->right=newnode;
     }
-   return 1;
+   
 }
 void inorder(struct node* root) {
     if (root != NULL) {
@@ -56,20 +56,21 @@ void inorder(struct node* root) {
 int main()
 {    
 
-    struct node* p=Createnode(5);
-    struct node* p1=Createnode(54);
-    struct node* p2=Createnode(67);
-    struct node* p3=Createnode(50);
-    struct node* p4=Createnode(51);
-    p->left=p1;
-    p->right=p2;
-    p1->left=p3;
-    p1->right=p4;
-    insert(p,7);
-    printf("the inorder values are\n ");
+   struct node* p = Createnode(5);
+    struct node* p1 = Createnode(54);
+    struct node* p2 = Createnode(67);
+    struct node* p3 = Createnode(50);
+    struct node* p4 = Createnode(51);
+
+    p->left = p1;
+    p->right = p2;
+    p1->left = p3;
+    p1->right = p4;
+
+    insert(p, 7);   // inserting new value
+
+    printf("BST values (inorder): ");
     inorder(p);
+
     return 0;
-
-
 }
-
