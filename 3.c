@@ -55,7 +55,6 @@ int main()
     p->right=p2;
     p1->left=p3;
     p1->right=p4;
-    p2->left=p5;
     insert(p,7);
     printf("%d ",p->right->right);
     return 0;
