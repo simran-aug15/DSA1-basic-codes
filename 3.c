@@ -9,8 +9,8 @@ struct node
 struct node* Createnode(int data)
 {
     struct node* n=(struct node*)malloc (sizeof(struct node));
-    n->data=dat;
-    n->left=NULL:
+    n->data=data;
+    n->left=NULL;
     n->right=NULL;
     return n;
 
@@ -23,7 +23,7 @@ int insert(struct node* root,int key)
         prev=root;
         if(key==root->data)
         {
-            return;
+            return 0;
         }
         else if(key<root->data)
         {
@@ -34,7 +34,7 @@ int insert(struct node* root,int key)
             root=root->right;
         }
     }
-    struct node* new=Createnode(key);
+    struct node*new=Createnode(key);
     if(key<prev->data)
     {
         prev->left=new;
