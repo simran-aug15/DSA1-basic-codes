@@ -44,7 +44,7 @@ int insert(struct node* root,int key)
     {
         prev->right=newnode;
     }
-
+   return 1;
 }
 int main()
 {
