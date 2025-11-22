@@ -34,15 +34,15 @@ int insert(struct node* root,int key)
             root=root->right;
         }
     }
-    struct node* new=(struct node*)malloc(sizeof(struct node));
-    struct node*new=Createnode(key)
+    
+    struct node*newnode=Createnode(key)
     if(key<prev->data)
     {
-        prev->left=new;
+        prev->left=newnode;
     }
     else
     {
-        prev->right=new;
+        prev->right=newnode;
     }
 }
 int main()
