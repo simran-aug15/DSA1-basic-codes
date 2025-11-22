@@ -45,6 +45,7 @@ int insert(struct node* root,int key)
         prev->right=newnode;
     }
 }
+}
 int main()
 {
     struct node* p=Createnode(5);
