@@ -34,6 +34,7 @@ int insert(struct node* root,int key)
             root=root->right;
         }
     }
+    struct node* new=(struct node*)malloc(sizeof(struct node));
     struct node*new=Createnode(key)
     if(key<prev->data)
     {
