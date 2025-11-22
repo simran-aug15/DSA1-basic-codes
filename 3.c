@@ -34,7 +34,7 @@ int insert(struct node* root,int key)
             root=root->right;
         }
     }
-    struct node*new=Createnode(key);
+    struct node*new=Createnode(key)
     if(key<prev->data)
     {
         prev->left=new;
