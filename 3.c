@@ -38,7 +38,7 @@ int main()
     insertHeap(TREE, &N, 45);
 
     printf("Heap after insertion: ");
-    for (int i = 1; i <= N; i++)
+    for (int i = 0; i <= N; i++)
         printf("%d ", TREE[i]);
 
     return 0;
