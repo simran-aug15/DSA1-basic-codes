@@ -1,43 +1,59 @@
 #include <stdio.h>
 
-void insertHeap(int TREE[], int *N, int ITEM)
+void deleteRoot(int TREE[], int *N)
 {
-    *N = *N + 1;       // Step 1: Increase size
-    int PTR = *N;      // PTR = N
+    int ITEM = TREE[1];     // Remove root
+    int LAST = TREE[*N];    // Last element
+    *N=*N-1;                // Reduce heap size
 
-    // Step 2: Repeat until PTR > 1
-    int PAR = PTR / 2;
+    int PTR = 1;
+    int LEFT = 2;
+    int RIGHT = 3;
 
-    while (PTR > 1)
+    // Heapify-down
+    while (RIGHT <= *N)
     {
-        PAR = PTR / 2;
-
-        // Step 4: If ITEM <= TREE[PAR],place it here
-        if (ITEM <= TREE[PAR])
+        // If LAST is bigger than both children → place it and stop
+        if (LAST >= TREE[LEFT] && LAST >= TREE[RIGHT])
         {
-            TREE[PTR] = ITEM;
+            TREE[PTR] = LAST;
             return;
         }
 
-        // Step 5: Move parent down
-        TREE[PTR] = TREE[PAR];
+        // If right child is smaller than left child
+        if (TREE[RIGHT] < TREE[LEFT])
+        {
+            TREE[PTR] = TREE[LEFT];
+            PTR = LEFT;
+        }
+        else
+        {
+            TREE[PTR] = TREE[RIGHT];
+            PTR = RIGHT;
+        }
 
-        // Step 6: Move up
-        PTR = PAR;
+        LEFT = 2 * PTR;
+        RIGHT = LEFT + 1;
     }
 
-    // Step 7: Place item at root
-    TREE[1] = ITEM;
+    // When only left child exists
+    if (LEFT <= *N && LAST < TREE[LEFT])
+    {
+        TREE[PTR] = TREE[LEFT];
+        PTR = LEFT;
+    }
+
+    TREE[PTR] = LAST;
 }
 
 int main()
 {
-    int TREE[20] = {1, 50, 30, 20, 15, 10}; // 1-indexed heap
-    int N = 5;
+    int TREE[50] = {1, 50, 30, 20, 15, 10, 8};  // 1-indexed heap
+    int N = 6;
 
-    insertHeap(TREE, &N, 45);
+    deleteRoot(TREE, &N);
 
-    printf("Heap after insertion: ");
+    printf("Heap after deletion: ");
     for (int i = 0; i <= N; i++)
         printf("%d ", TREE[i]);
 
