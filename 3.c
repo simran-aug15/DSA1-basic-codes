@@ -32,7 +32,7 @@ void insertHeap(int TREE[], int *N, int ITEM)
 
 int main()
 {
-    int TREE[20] = {0, 50, 30, 20, 15, 10}; // 1-indexed heap
+    int TREE[20] = {1, 50, 30, 20, 15, 10}; // 1-indexed heap
     int N = 5;
 
     insertHeap(TREE, &N, 45);
