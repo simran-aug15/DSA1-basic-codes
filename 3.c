@@ -12,7 +12,7 @@ void insertHeap(int TREE[], int *N, int ITEM)
     {
         PAR = PTR / 2;
 
-        // Step 4: If ITEM <= TREE[PAR], place it here
+        // Step 4: If ITEM <= TREE[PAR],place it here
         if (ITEM <= TREE[PAR])
         {
             TREE[PTR] = ITEM;
