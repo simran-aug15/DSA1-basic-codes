@@ -23,7 +23,7 @@ void enqueue(struct queue* q,int val)
     else{
         q->r++;
         q->arr[q->r]=val;
-        printf(" The values is %d \n",val);
+        
     }
 }
 int isempty(struct queue* q)
@@ -50,35 +50,41 @@ int dequeue(struct queue* q)
     }
 }
 int main()
-{
+{ struct queue q;
+    q.size = 100;
+    q.f = q.r = -1;
+    q.arr = (int*)malloc(q.size * sizeof(int));
+
     int u;
-    int i=0;
+    
     int visited [7]={0,0,0,0,0,0,0};
     int a[7][7]={
-    {0,1,1,1,0,0,0};
-    {1,0,0,1,0,0,0};
-    {1,1,0,1,1,0,0};
-    {1,0,1,0,1,0,0};
-    {0,0,1,1,0,1,1};
-    {0,0,0,0,1,0,0};
-    {0,0,0,0,1,0,0};
+    {0,1,1,1,0,0,0},
+    {1,0,0,1,0,0,0},
+    {1,1,0,1,1,0,0},
+    {1,0,1,0,1,0,0},
+    {0,0,1,1,0,1,1},
+    {0,0,0,0,1,0,0},
+    {0,0,0,0,1,0,0}
          };
+         int i=0;
    printf("%d",i);
    visited[i]=1;
    enqueue(&q,i);
-   while(isempty(&q));
+   while(!isempty(&q))
    {
      int u=dequeue(&q);
-   }
+   
    for(int j=0;j<7;j++)
    {
     if(a[u][j]==1 &&visited[j]==0)
     {
-        printf("%d",j);
-        visited[j]=i;
+        printf("%d \n",j);
+        visited[j]=1;
         enqueue(&q,j);
     }
    }
-
+}
+ return 0;
 
 }
