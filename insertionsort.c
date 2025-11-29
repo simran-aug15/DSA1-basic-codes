@@ -20,7 +20,7 @@ int main()
         int size=sizeof(arr)/sizeof(arr[0]);
         insertionsort(arr,size);
         for(int i=0;i<size;i++)
-        {
+        {    printf("Element after sorting \n")
             printf("%d  ",arr[i]);
         }
 
