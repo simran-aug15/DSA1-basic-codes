@@ -36,6 +36,7 @@ int main()
     third->data=70;
     third->next=NULL;
     traverselinkedlist(head);
+    printf("Element after insertion \n ");
     head=insertionatfirst(head,56);
        traverselinkedlist(head);
      
