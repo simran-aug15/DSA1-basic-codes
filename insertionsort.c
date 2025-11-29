@@ -22,8 +22,9 @@ int main()
         for(int i=0;i<size;i++)
         {    
             printf("%d  ",arr[i] );
-            printf("\n");
+            
         }
+        printf("\n");
         insertionsort(arr,size);
         printf("Element after sorting \n");
         for(int i=0;i<size;i++)
