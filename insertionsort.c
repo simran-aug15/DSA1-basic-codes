@@ -18,7 +18,7 @@ int main()
     {
         int arr[]={2,56,34,78,12};
         int size=sizeof(arr)/sizeof(arr[0]);
-        printf("Elements before sorting \n ");
+        printf("Elements before sorting  ");
         for(int i=0;i<size;i++)
         {    
             printf("%d  ",arr[i] \n);
