@@ -46,7 +46,7 @@ void enqueue(struct queue* q,int val)
     else{
         q->r++;
         q->arr[q->r]=val;
-        printf(" The values is %d \n",val);
+        printf("The values is %d \n",val);
     }
 }
 int main()
