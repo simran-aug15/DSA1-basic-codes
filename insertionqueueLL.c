@@ -30,7 +30,7 @@ void enqueue(int val)
     }
 }
 int linkedlisttraversal(struct node* ptr)
-{   printf("Elements after insertion \n ")
+{   printf("Elements after insertion \n ");
     while(ptr!=NULL)
     {
         printf("Element %d \n ",ptr->data);
