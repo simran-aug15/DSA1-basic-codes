@@ -59,9 +59,9 @@ int main()
     enqueue(&q,56);
     enqueue(&q,30);
     enqueue(&q,15);
-    printf("Dequeuing element %d \n ",dequeue(&q));
-    printf("Dequeuing element %d \n", dequeue(&q));
-    printf("Dequeuing element %d \n ",dequeue(&q));
+    printf("Dequeuing element %d \n",dequeue(&q));
+    printf("Dequeuing element %d \n",dequeue(&q));
+    printf("Dequeuing element %d \n",dequeue(&q));
 
 
 
