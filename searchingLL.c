@@ -49,7 +49,7 @@ int main()
     third->next=NULL;
     printf("original \n");
     traverselinkedlist(head);
-    head=search(head,10);
+    head=search(head,12);
 
      
     
