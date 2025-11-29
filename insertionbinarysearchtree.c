@@ -69,7 +69,7 @@ int main()
 
     insert(p, 7);   // inserting new value
 
-    printf("BST values (inorder): ");
+    printf("BST values (inorder): \n");
     inorder(p);
 
     return 0;
