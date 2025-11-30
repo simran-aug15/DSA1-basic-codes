@@ -37,10 +37,10 @@ void display(int arr[],int n)
          printf("Element before insertion and deletion");
          display(arr,size);
          indInsertion(arr,size,element,100,index);
-         size=size+1;555
+         size=size+1;
          printf("Element after insertion");
          display(arr,size);
-         Deletion(arr,size,index);55
+         Deletion(arr,size,index);
          size=size-1;
          printf("Element after deletion");
          display(arr,size);
