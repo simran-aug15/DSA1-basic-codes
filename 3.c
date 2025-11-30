@@ -16,11 +16,11 @@ int binaryinsertion(int arr[],int size,int element1)
     while(low<=high)
     {
         mid=(low+high)/2;
-        if(arr[mid]==element)
+        if(arr[mid]==element1)
         {
             return mid;
         }
-        if(arr[mid]<element)
+        if(arr[mid]<element1)
         {
             low=mid+1;
         }
