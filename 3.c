@@ -37,9 +37,9 @@ int main()
     int arr[]={2,3,5,8,9,10,14,16,18,20,24,26,29,30,45};
     int size=sizeof(arr)/sizeof(arr[0]);
     int element=8;
-    int element1=10;
     int search=linearinsertion(arr,size,element);
     printf("The element %d is at index  %d ",element,search);
+    int element1=9;
     printf("\n");
     int search1=binaryinsertion(arr,size,element1); 
     printf("The element %d is at index : %d",element1,search1);
