@@ -38,8 +38,7 @@ int main()
     head->data=7;
     head->next=second;
     second->data=73;
-   second->next=third;
-
+    second->next=third;
     third->data=70;
     third->next=NULL;
     traverselinkedlist(head);
