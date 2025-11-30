@@ -39,8 +39,8 @@ int main()
     int element=67;
     int search=linearinsertion(arr,size,element);
     printf("The element %d is at index  %d ",element,search);
-    int search=binaryinsertion(arr,size,element); 
-    printf("The element %d is at index : %d",element,search);
+    int search1=binaryinsertion(arr,size,element); 
+    printf("The element %d is at index : %d",element,search1);
     
     
 
