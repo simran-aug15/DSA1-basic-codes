@@ -36,7 +36,7 @@ int main()
 {
     int arr[]={2,3,45,67,8,78,98,68,67,56,90,20};
     int size=sizeof(arr)/sizeof(arr[0]);
-    int element=67;
+    int element=8;
     int search=linearinsertion(arr,size,element);
     printf("The element %d is at index  %d ",element,search);
     printf("\n");
