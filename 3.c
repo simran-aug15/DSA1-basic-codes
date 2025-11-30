@@ -46,7 +46,7 @@ int main()
     head=insertionatfirst(head,56);
     traverselinkedlist(head);
     head=deletionatfirst(head);
-    printf("after insertion \n");
+    printf("after deletrion \n");
     traverselinkedlist(head);
      
      
