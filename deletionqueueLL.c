@@ -27,6 +27,7 @@ void enqueue(int val)
         r->next=n;
         r=n;
       }
+      
     }
 }
 int dequeue()
