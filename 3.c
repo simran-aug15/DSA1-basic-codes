@@ -34,7 +34,7 @@ int binaryinsertion(int arr[],int size,int element)
 }
 int main()
 {
-    int arr[]={2,3,45,67,8,78,98,68,67,56,90,20};
+    int arr[]={2,3,5,8,9,10,14,16,18,20,24,26,29,30,45};
     int size=sizeof(arr)/sizeof(arr[0]);
     int element=8;
     int search=linearinsertion(arr,size,element);
