@@ -57,13 +57,21 @@ void display()
     }
     printf("\n");
 }
+int circularqueuetraversal(struct node* ptr)
+{
+    while(ptr!=NULL)
+    {
+        printf(" Element %d \n",ptr->data);
+        ptr=ptr->next;
+    }
+}
 
 int main()
 {
     enqueue(10);
     enqueue(20);
     enqueue(30);
-
+    circularqueuetraversal()
     printf("Deleted: %d\n", dequeue());
     printf("Deleted: %d\n", dequeue());
 
