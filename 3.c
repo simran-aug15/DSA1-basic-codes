@@ -40,7 +40,6 @@ int main()
     int search=linearinsertion(arr,size,element);
     printf("The element %d is at index  %d ",element,search);
     printf("\n");
-    int element=8;
     int search1=binaryinsertion(arr,size,element); 
     printf("The element %d is at index : %d",element,search1);
     
