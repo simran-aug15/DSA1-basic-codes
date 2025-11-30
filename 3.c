@@ -30,6 +30,23 @@ struct node* deletionatfirst(struct node*head)
    free(ptr);
    return head;
 }
+struct node* search(struct node*head,int value)
+{
+   struct node*p=head;
+   int pos=1;
+   while( p->next!=NULL)
+   {
+    if(p->data == value)
+    {
+        printf("Element %d found at pos %d",value,pos);
+        return head;
+    }
+    p=p->next;
+    pos++;
+   }
+  printf("Element %d  not found ",value);
+}
+
 int main()
 {
    struct node*head=(struct node*)malloc(sizeof(struct node));
@@ -48,7 +65,10 @@ int main()
     head=deletionatfirst(head);
     printf("Element after deletion \n");
     traverselinkedlist(head);
-     
+    printf("original \n");
+    traverselinkedlist(head);
+    head=search(head,7);
+
      
     
 }
