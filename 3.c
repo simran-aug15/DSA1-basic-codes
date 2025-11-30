@@ -1,49 +1,59 @@
 #include<stdio.h>
-int linearinsertion(int arr[],int size,int element)
-{  for(int i=0;i<size;i++)
-    if(arr[i]==element)
+#include<stdlib.h>
+//Insertion at start of single LL
+struct node
+{
+  int data;
+  struct node*next;  /* data */
+};
+ void traverselinkedlist(struct node*ptr)
+{
+    while(ptr!=NULL)
     {
-        return i;
+        printf("The values are: %d",ptr->data);
+        ptr=ptr->next;
+        printf("\n");
     }
-    
-    return -1;
 }
-int binaryinsertion(int arr[],int size,int element1)
-{   
-    int low,high,mid;
-    low=0;
-    high=size-1;
-    while(low<=high)
-    {
-        mid=(low+high)/2;
-        if(arr[mid]==element1)
-        {
-            return mid;
-        }
-        if(arr[mid]<element1)
-        {
-            low=mid+1;
-        }
-        else
-        {
-            high=mid-1;
-        }
-        return -1;
-    }
-    
+struct node* insertionatfirst(struct node*head,int data)
+{
+   struct node*ptr=(struct node*)malloc(sizeof(struct node ));
+   ptr->data=data;
+   ptr->next=head;
+   head=ptr;
+   return ptr;
+}
+struct node* deletionatfirst(struct node*head)
+{
+   struct node*ptr=head;
+   head=head->next;
+   free(ptr);
+   return head;
 }
 int main()
 {
-    int arr[]={2,3,5,8,9,10,14,16,18,20,24,26,29,30,45};
-    int size=sizeof(arr)/sizeof(arr[0]);
-    int element=8;
-    int search=linearinsertion(arr,size,element);
-    printf("The element %d is at index  %d ",element,search);
-    int element1=9;
-    printf("\n");
-    int search1=binaryinsertion(arr,size,element1); 
-    printf("The element %d is at index : %d",element1,search1);
-    
-    
+   struct node*head=(struct node*)malloc(sizeof(struct node));
+    struct node*second=(struct node*)malloc(sizeof(struct node));
+    struct node*third=(struct node*)malloc(sizeof(struct node));
+    head->data=7;
+    head->next=second;
+    second->data=73;
+   second->next=third;
 
+    third->data=70;
+    third->next=NULL;
+    traverselinkedlist(head);
+    printf("Element after insertion \n ");
+    head=insertionatfirst(head,56);
+    traverselinkedlist(head);
+    head=deletionatfirst(head);
+    printf("after insertion \n");
+    traverselinkedlist(head);
+     
+     
+    
 }
+
+
+
+
