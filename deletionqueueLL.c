@@ -50,7 +50,7 @@ int linkedlisttraversal(struct node* ptr)
 {
     while(ptr!=NULL)
     {
-        printf(" Element %d \n",ptr->data);
+        printf(" Element enqueue is %d \n",ptr->data);
         ptr=ptr->next;
     }
 }
