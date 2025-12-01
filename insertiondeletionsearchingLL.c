@@ -10,7 +10,7 @@ struct node
 {
     while(ptr!=NULL)
     {
-        printf("The values are: %d",ptr->data);
+        printf("The values in linked list are: %d",ptr->data);
         ptr=ptr->next;
         printf("\n");
     }

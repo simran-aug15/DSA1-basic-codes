@@ -10,12 +10,12 @@ int linearinsertion(int arr[],int size,int element)
 }
 
 int main()
-{
+{  
     int arr[]={2,3,45,67,8,78,98,67,67};
     int size=9;
     int element=65;
     int search=linearinsertion(arr,size,element);
-    printf("The element %d is at index  %d ",element,search);
+    printf("The element we  %d is at index  %d ",element,search);
 
     
 
